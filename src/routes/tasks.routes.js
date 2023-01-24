@@ -3,11 +3,9 @@
 const { Router } = require('express')
 const pool = require('../db')
 
-const { getAllTasks, getTask, postTask, updateTask, deleteTask } = require('../controllers/task.controller')
-
+const { getAllTasks, getTask, createTask, updateTask, deleteTask } = require('../controllers/task.controller')
 
 const router = Router()
-
 
 //Esto seria el famosos CRUD
 
@@ -18,7 +16,7 @@ const router = Router()
 }) */
 
 router.get('/tasks', getAllTasks)
-router.post('/tasks', postTask )
+router.post('/tasks', createTask )
 router.delete('/tasks', deleteTask)
 router.put('/tasks', updateTask)
 router.get('/tasks/10', getTask) 

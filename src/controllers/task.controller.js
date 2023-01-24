@@ -8,7 +8,7 @@ const getTask =  (req, res) => {
     res.send("Obteniendo una tarea")
 }
 
-const postTask =  (req, res) => {
+const createTask =  (req, res) => {
     res.send("Subiendo una Tarea")
 }
 
@@ -24,7 +24,7 @@ const deleteTask = (req, res) => {
 module.exports = {
     getAllTasks,
     getTask,
-    postTask,
+    createTask,
     updateTask,
     deleteTask
 }
