@@ -5,6 +5,7 @@ const taskRoutes = require('./routes/tasks.routes')
 const app = express()
 
 app.use(morgan('dev'))  //sirve para ver las peticiones
+app.use(express.json()) // para que la app entienda json
 app.use(taskRoutes); // para utilizar las rutas
 
 
